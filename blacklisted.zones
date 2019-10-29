@@ -1,1 +1,0 @@
-zone "pepe.com" in { type master ; file "/etc/bind/zones/master/blockeddomains.db";};
