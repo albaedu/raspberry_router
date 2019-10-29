@@ -17,7 +17,10 @@ rm -rf /etc/bind/named.conf.local
 cp /root/raspberry_router/named.conf.local /etc/bind/named.conf.local
 mkdir -p /etc/bind/zones/master/
 cp /root/raspberry_router/blockeddomains.db /etc/bind/zones/master/blockeddomains.db
-wget -O - https://raw.githubusercontent.com/notracking/hosts-blocklists/master/domains.txt | sed -e '1,15d' | awk -F[/:] '{print $2}' | awk '{print "zone \""$1"\" in { type master; file \"/etc/bind/zones/blockeddomains.db\"; };"}' > /etc/bind/blacklisted.zones
+touch /etc/bind/blacklisted_custom.zones
+wget -O - https://raw.githubusercontent.com/notracking/hosts-blocklists/master/domains.txt | sed -e '1,15d' | awk -F[/:] '{print $2}' | awk '{print "zone \""$1"\" in { type master; file \"/etc/bind/zones/blockeddomains.db\"; };"}' > /etc/bind/blacklisted_longlist.zones
+
+# Cron para el wget
 
 # Config dhcp
 
