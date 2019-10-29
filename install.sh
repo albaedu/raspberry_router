@@ -9,6 +9,12 @@ mkdir /scripts
 rm -rf /etc/bind/named.conf.options
 cp /root/raspberry_router/named.conf.options /etc/bind/named.conf.options
 
+# Config dhcp
+
+rm -rf /etc/udhcpd.conf
+cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
+udhcpd.conf
+
 # Envio sms mejor que pushbullet, borrar cuenta pushbullet
 
     
