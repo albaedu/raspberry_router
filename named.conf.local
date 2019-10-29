@@ -1,1 +1,2 @@
-include "/etc/bind/blacklisted.zones";
+include "/etc/bind/blacklisted_longlist.zones";
+include "/etc/bind/blacklisted_custom.zones";
