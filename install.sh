@@ -1,6 +1,6 @@
 apt-get update ; apt-get upgrade -y
 
-apt-get install wget curl nano isc-dhcp-server bind9 bind9utils bind9-doc -y
+apt-get install wget curl nano udhcpd bind9 bind9utils bind9-doc -y
 
 mkdir /scripts
 
