@@ -8,6 +8,9 @@ mkdir /scripts
 
 rm -rf /etc/bind/named.conf.options
 cp /root/raspberry_router/named.conf.options /etc/bind/named.conf.options
+rm -rf /etc/bind/named.conf.local
+cp /root/raspberry_router/named.conf.local /etc/bind/named.conf.local
+
 
 # Config dhcp
 
