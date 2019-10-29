@@ -4,6 +4,6 @@ Hi! This is a personal project who installs a dhcp server, email system monitor,
 
 #Install:
 
-cd /root ; git clone https://github.com/albaedu/raspberry_router.git ; sh /root/raspberry_router/install.sh
+apt-get update ; apt-get install git -y ; cd /root ; git clone https://github.com/albaedu/raspberry_router.git ; sh /root/raspberry_router/install.sh
 
 #Config:
