@@ -6,9 +6,6 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 mkdir /scripts
-
-# Config dnsmasq
-
 # Config bind
 
 rm -rf /etc/bind/named.conf.options
@@ -21,6 +18,8 @@ touch /etc/bind/blacklisted_custom.zones
 wget -O - https://raw.githubusercontent.com/notracking/hosts-blocklists/master/domains.txt | sed -e '1,15d' | awk -F[/:] '{print $2}' | awk '{print "zone \""$1"\" in { type master; file \"/etc/bind/zones/blockeddomains.db\"; };"}' > /etc/bind/blacklisted_longlist.zones
 
 # Cron para el wget
+
+# Config apache ip 10.0.0.2 para ban
 
 # Config dhcp
 
