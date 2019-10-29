@@ -38,4 +38,5 @@ cp /root/raspberry_router/blockeddomains.db /etc/bind/zones/master/blockeddomain
 #--data '{"body":"Your message", "title":"Hello World!", "type":"note"}'
 
 rm -rf /root/raspberry_router
-reboot
+echo ""
+echo "you should restart"
