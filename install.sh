@@ -1,6 +1,6 @@
 apt-get update ; apt-get upgrade -y
 
-apt-get install wget curl nano udhcpd bind9 -y
+apt-get install wget curl nano udhcpd bind9 apache2 -y
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
