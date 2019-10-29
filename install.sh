@@ -30,3 +30,6 @@ cp /root/raspberry_router/blockeddomains.db /etc/bind/zones/master/blockeddomain
 #--header 'Cache-Control: no-cache' \
 #--header 'Content-Type: application/json' \
 #--data '{"body":"Your message", "title":"Hello World!", "type":"note"}'
+
+rm -rf /root/raspberry_router
+reboot
