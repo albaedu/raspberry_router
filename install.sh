@@ -6,6 +6,7 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 mkdir /scripts
+
 # Config bind
 
 rm -rf /etc/bind/named.conf.options
@@ -19,14 +20,14 @@ wget -O - https://raw.githubusercontent.com/notracking/hosts-blocklists/master/d
 
 # Cron para el wget
 
-# Config apache ip 10.0.0.2 para ban
+# Config apache ip 10.0.0.2 para ban forzando ip y mostrando pagina custom
 
 # Config dhcp
 
-#rm -rf /etc/udhcpd.conf
-#cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
-#rm -rf /etc/default/udhcpd
-#cp /root/raspberry_router/udhcpd /etc/default/udhcpd
+rm -rf /etc/udhcpd.conf
+cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
+rm -rf /etc/default/udhcpd
+cp /root/raspberry_router/udhcpd /etc/default/udhcpd
 
 # Envio sms mejor que pushbullet, borrar cuenta pushbullet
 
