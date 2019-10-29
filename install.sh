@@ -11,6 +11,7 @@ cp /root/raspberry_router/named.conf.options /etc/bind/named.conf.options
 rm -rf /etc/bind/named.conf.local
 cp /root/raspberry_router/named.conf.local /etc/bind/named.conf.local
 cp /root/raspberry_router/blacklisted.zones /etc/bind/blacklisted.zones
+mkdir -p /etc/bind/zones/master/
 cp /root/raspberry_router/blockeddomains.db /etc/bind/zones/master/blockeddomains.db
 
 
