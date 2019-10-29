@@ -4,6 +4,11 @@ apt-get install wget curl nano isc-dhcp-server bind9 bind9utils bind9-doc -y
 
 mkdir /scripts
 
+# Config bind
+
+rm -rf /etc/bind/named.conf.options
+cp /root/raspberry_router/named.conf.options /etc/bind/named.conf.options
+
 # Envio sms mejor que pushbullet, borrar cuenta pushbullet
 
     
