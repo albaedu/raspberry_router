@@ -1,1 +1,1 @@
-zone "esther.codes" {type master​; file "/etc/bind/zones/master/blockeddomains.db";};
+zone "pepe.com" in { type master ; file "/etc/bind/zones/master/blockeddomains.db";};
