@@ -13,7 +13,8 @@ cp /root/raspberry_router/named.conf.options /etc/bind/named.conf.options
 
 rm -rf /etc/udhcpd.conf
 cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
-udhcpd.conf
+rm -rf /etc/default/udhcpd
+cp /root/raspberry_router/udhcpd /etc/default/udhcpd
 
 # Envio sms mejor que pushbullet, borrar cuenta pushbullet
 
