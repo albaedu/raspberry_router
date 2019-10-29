@@ -1,0 +1,1 @@
+zone "blockeddomain.com" {type master​; file "/etc/bind/zones/master/blockeddomains.db";};
