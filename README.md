@@ -12,6 +12,4 @@ raspi-config, Boot in console, Upgrade system, reboot
 
 #Install:
 
-sudo -s ; apt-get update ; apt-get install git -y ; cd /root ; git clone https://github.com/albaedu/raspberry_router.git ; sh /root/raspberry_router/install.sh
-
-#Config:
+sudo -s ; cd /root ; git clone https://github.com/albaedu/raspberry_router.git ; sh /root/raspberry_router/install.sh
