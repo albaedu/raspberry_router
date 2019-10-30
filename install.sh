@@ -31,6 +31,8 @@ sudo install-wifi
 #cp /root/raspberry_router/interfaces /etc/network/interfaces
 #sudo /etc/init.d/networking restart
 
+# WAN Static IP + Google DNS
+
 # DHCP Server config
 rm -rf /etc/udhcpd.conf
 cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
