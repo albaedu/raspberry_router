@@ -25,6 +25,11 @@ wget http://www.fars-robotics.net/install-wifi -O /usr/bin/install-wifi
 chmod +x /usr/bin/install-wifi
 sudo install-wifi
 
+# Wifi interface network
+
+rm -rf /etc/network/interfaces
+cp /root/raspberry_router/interfaces /etc/network/interfaces
+
 # DHCP Server config
 rm -rf /etc/udhcpd.conf
 cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
