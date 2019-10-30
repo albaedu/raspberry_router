@@ -4,7 +4,7 @@ apt-get install wget nano bc git curl openssl pwgen zip unzip -y
 
 # Router software
 
-apt-get install udhcpd hostapd -y
+apt-get install isc-dhcp-server hostapd -y
 
 # SSH Config
 
@@ -34,10 +34,10 @@ sudo install-wifi
 # WAN Static IP + Google DNS
 
 # DHCP Server config
-rm -rf /etc/udhcpd.conf
-cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
-rm -rf /etc/default/udhcpd
-cp /root/raspberry_router/udhcpd /etc/default/udhcpd
+#rm -rf /etc/udhcpd.conf
+#cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
+#rm -rf /etc/default/udhcpd
+#cp /root/raspberry_router/udhcpd /etc/default/udhcpd
 
 # Hostpad config
 
