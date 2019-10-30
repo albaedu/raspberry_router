@@ -29,6 +29,7 @@ sudo install-wifi
 
 rm -rf /etc/network/interfaces
 cp /root/raspberry_router/interfaces /etc/network/interfaces
+sudo /etc/init.d/networking restart
 
 # DHCP Server config
 rm -rf /etc/udhcpd.conf
