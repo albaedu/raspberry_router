@@ -4,7 +4,7 @@ apt-get install wget nano bc git curl openssl pwgen zip unzip -y
 
 # Router software
 
-apt-get install udhcpd -y
+apt-get install udhcpd hostapd -y
 
 # SSH Config
 
