@@ -43,6 +43,8 @@ rm -rf /etc/hostapd/hostapd.conf
 cp /root/raspberry_router/hostapd.conf /etc/hostapd/hostapd.conf
 rm -rf /etc/default/hostapd
 cp /root/raspberry_router/hostapd /etc/default/hostapd
+systemctl unmask hostapd
+systemctl enable hostapd
 
 # End
 
