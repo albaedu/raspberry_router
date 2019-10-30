@@ -8,7 +8,7 @@ via ip or via hostname: raspberrypi.local
 #Preparation:
 
 apt-get update ; apt-get upgrade -y ; reboot
-raspi-config, Boot in console, Upgrade system, reboot
+raspi-config, Boot in console, Upgrade system, config de pais de wifi, reboot
 
 #Install:
 
