@@ -25,6 +25,10 @@ wget http://www.fars-robotics.net/install-wifi -O /usr/bin/install-wifi
 chmod +x /usr/bin/install-wifi
 sudo install-wifi
 
+# DHCP Server config
+rm -rf /etc/udhcpd.conf
+cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
+
 rm -rf /root/raspberry_router
 echo ""
 echo "your root password is"
