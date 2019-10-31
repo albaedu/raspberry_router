@@ -1,1 +1,1 @@
-zone "000007.ru" in { type master; file "/etc/bind/zones/blockeddomains.db"; };
+zone "000007.ru" in { type master; file "/etc/bind/zones/master/blockeddomains.db"; };
