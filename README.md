@@ -18,9 +18,9 @@ default raspberry login: pi / raspberry
 
 1 - Have a VPN server and create the client.ovpn config file
 
-2 - Install nginx/apache on vpn server and set a default page for blocked site
+2 - Install nginx/apache server (not in the vpn server) and set a default page for blocked site 
 
-3 - Change the VPN Server ip used to show blocked ad
+3 - Change the VPN Server ip used to show blocked ad in bind zone
 
 #Preparation:
 
