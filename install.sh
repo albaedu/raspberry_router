@@ -31,6 +31,10 @@ sudo install-wifi
 rm -rf /etc/dhcpcd.conf
 cp /root/raspberry_router/dhcpcd.conf /etc/dhcpcd.conf
 
+# Internet share config
+rm -rf /etc/sysctl.conf
+cp /root/raspberry_router/sysctl.conf /etc/sysctl.conf
+
 # DHCP Server config
 
 rm -rf /etc/default/isc-dhcp-server
