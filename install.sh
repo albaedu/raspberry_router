@@ -32,19 +32,21 @@ rm -rf /etc/dhcpcd.conf
 cp /root/raspberry_router/dhcpcd.conf /etc/dhcpcd.conf
 
 # DHCP Server config
-#rm -rf /etc/udhcpd.conf
-#cp /root/raspberry_router/udhcpd.conf /etc/udhcpd.conf
-#rm -rf /etc/default/udhcpd
-#cp /root/raspberry_router/udhcpd /etc/default/udhcpd
+
+rm -rf /etc/default/isc-dhcp-server
+cp /root/raspberry_router/isc-dhcp-server /etc/default/isc-dhcp-server
+rm -rf /etc/dhcp/dhcpd.conf
+cp /root/raspberry_router/dhcpd.conf /etc/dhcp/dhcpd.conf
+systemctl enable isc-dhcp-server.service
 
 # Hostpad config
 
-#rm -rf /etc/hostapd/hostapd.conf
-#cp /root/raspberry_router/hostapd.conf /etc/hostapd/hostapd.conf
-#rm -rf /etc/default/hostapd
-#cp /root/raspberry_router/hostapd /etc/default/hostapd
-#systemctl unmask hostapd
-#systemctl enable hostapd
+rm -rf /etc/hostapd/hostapd.conf
+cp /root/raspberry_router/hostapd.conf /etc/hostapd/hostapd.conf
+rm -rf /etc/default/hostapd
+cp /root/raspberry_router/hostapd /etc/default/hostapd
+systemctl unmask hostapd
+systemctl enable hostapd
 
 # End
 
