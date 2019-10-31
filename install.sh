@@ -46,7 +46,7 @@ rm -rf /etc/default/isc-dhcp-server
 cp /root/raspberry_router/isc-dhcp-server /etc/default/isc-dhcp-server
 rm -rf /etc/dhcp/dhcpd.conf
 cp /root/raspberry_router/dhcpd.conf /etc/dhcp/dhcpd.conf
-systemctl enable isc-dhcp-server.service
+systemctl disable isc-dhcp-server.service
 
 # Hostpad config
 
