@@ -4,7 +4,7 @@ apt-get install wget nano bc git curl openssl pwgen zip unzip -y
 
 # Router software
 
-apt-get install isc-dhcp-server bind9 hostapd -y
+apt-get install isc-dhcp-server bind9 openvpn hostapd -y
 
 # SSH Config
 
