@@ -4,7 +4,7 @@ apt-get install wget nano bc git curl openssl pwgen zip unzip -y
 
 # Router software
 
-apt-get install isc-dhcp-server hostapd -y
+apt-get install isc-dhcp-server bind9 hostapd -y
 
 # SSH Config
 
@@ -56,6 +56,17 @@ rm -rf /etc/default/hostapd
 cp /root/raspberry_router/hostapd /etc/default/hostapd
 systemctl unmask hostapd
 systemctl enable hostapd
+
+# Bind config
+
+rm -rf /etc/bind/named.conf.options
+cp /root/raspberry_router/named.conf.options /etc/bind/named.conf.options
+rm -rf /etc/bind/named.conf.local
+cp /root/raspberry_router/named.conf.local /etc/bind/named.conf.local
+mkdir -p /etc/bind/zones/master/
+cp /root/raspberry_router/blockeddomains.db /etc/bind/zones/master/blockeddomains.db
+touch /etc/bind/blacklisted_custom.zones
+wget -O - https://raw.githubusercontent.com/notracking/hosts-blocklists/master/domains.txt | sed -e '1,15d' | awk -F[/:] '{print $2}' | awk '{print "zone \""$1"\" in { type master; file \"/etc/bind/zones/blockeddomains.db\"; };"}' > /etc/bind/blacklisted_longlist.zones
 
 # End
 
