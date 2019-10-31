@@ -17,3 +17,11 @@ sudo -s ; cd /root ; git clone https://github.com/albaedu/raspberry_router.git ;
 # Important:
 
 Before reboot, please insert your client.ovpn config
+
+# IP Configuration:
+
+WAN: IP: 192.168.8.2
+WAN Router: 192.168.8.1
+WAN DNS: 8.8.8.8
+
+WIFI IP: 10.0.0.1
