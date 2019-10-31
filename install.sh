@@ -31,15 +31,6 @@ sudo install-wifi
 rm -rf /etc/dhcpcd.conf
 cp /root/raspberry_router/dhcpcd.conf /etc/dhcpcd.conf
 
-# Internet share config
-
-rm -rf /etc/sysctl.conf
-cp /root/raspberry_router/sysctl.conf /etc/sysctl.conf
-iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
-sh -c "iptables-save > /etc/iptables.ipv4.nat"
-rm -rf /etc/rc.local
-cp /root/raspberry_router/rc.local /etc/rc.local
-
 # DHCP Server config
 
 rm -rf /etc/default/isc-dhcp-server
@@ -66,6 +57,20 @@ cp /root/raspberry_router/named.conf.local /etc/bind/named.conf.local
 mkdir -p /etc/bind/zones/master/
 cp /root/raspberry_router/blockeddomains.db /etc/bind/zones/master/blockeddomains.db
 touch /etc/bind/blacklisted.zones
+
+# Openvpn config
+
+systemctl disable openvpn
+cp /root/raspberry_router/client.ovpn /etc/openvpn/client.ovpn
+
+# Internet share config
+
+rm -rf /etc/sysctl.conf
+cp /root/raspberry_router/sysctl.conf /etc/sysctl.conf
+iptables -t nat -A  POSTROUTING -o tun0 -j MASQUERADE
+sh -c "iptables-save > /etc/iptables.ipv4.nat"
+rm -rf /etc/rc.local
+cp /root/raspberry_router/rc.local /etc/rc.local
 
 # End
 
