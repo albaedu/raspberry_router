@@ -3,4 +3,4 @@ $TTL 1m
 @ IN SOA ( ns1.domain.com. hostmaster.domain.com.
            1 10800 3600 86400 21600 )
   IN NS  192.168.1.144.
-@             IN  A    10.0.0.2              ;
+@             IN  A    94.237.120.96              ;
