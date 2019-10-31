@@ -2,6 +2,14 @@
 
 Hi! This is a personal project who installs a dhcp server, pushbullet system monitor, web panel, vpn client and ad-blocker to share internet from a 4g usb dongle to wifi using a raspberry pi
 
+# Pending:
+
+- Push notifications
+
+- Ads lists to block
+
+- Web interface
+
 # How to access:
 via ip or via hostname: raspberrypi.local
 default raspberry login: pi / raspberry
