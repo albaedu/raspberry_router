@@ -4,6 +4,12 @@ Hi! This is a personal project who installs a dhcp server, pushbullet system mon
 
 # How to access:
 via ip or via hostname: raspberrypi.local
+default raspberry login: pi / raspberry
+
+# Requeriments:
+
+1 - Have a VPN server and create the client.ovpn config file
+2 - Install nginx on vpn server and set a default page for blocked site
 
 #Preparation:
 
@@ -13,10 +19,6 @@ raspi-config, Boot in console, Upgrade system, reboot
 #Install:
 
 sudo -s ; cd /root ; git clone https://github.com/albaedu/raspberry_router.git ; sh /root/raspberry_router/install.sh
-
-# Important:
-
-Before reboot, please insert your client.ovpn config
 
 # IP Configuration:
 
