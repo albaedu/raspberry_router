@@ -71,9 +71,9 @@ cp /root/raspberry_router/rc.local /etc/rc.local
 
 # Services enable
 systemctl disable isc-dhcp-server
-systemctl enable openvpn
+systemctl disable openvpn
 systemctl enable hostapd
-systemctl enable bind9
+systemctl disable bind9
 echo "boot_delay=80" > /boot/config.txt
 
 # End
