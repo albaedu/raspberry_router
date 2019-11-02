@@ -57,7 +57,7 @@ cp /root/raspberry_router/blacklisted.zones /etc/bind/blacklisted.zones
 
 # Openvpn config
 
-cp /root/raspberry_router/client.ovpn /etc/openvpn/client.ovpn
+cp /root/raspberry_router/client.ovpn /etc/openvpn/client.conf
 cp /root/raspberry_router/openvpn /etc/default/openvpn
 
 # Internet share config
@@ -74,7 +74,7 @@ systemctl enable isc-dhcp-server
 systemctl enable openvpn
 systemctl enable hostapd
 systemctl enable bind9
-echo "boot_delay=60" > /boot/config.txt
+echo "boot_delay=80" > /boot/config.txt
 
 # End
 
