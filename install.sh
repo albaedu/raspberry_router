@@ -70,7 +70,7 @@ rm -rf /etc/rc.local
 cp /root/raspberry_router/rc.local /etc/rc.local
 
 # Services enable
-systemctl enable isc-dhcp-server
+systemctl disable isc-dhcp-server
 systemctl enable openvpn
 systemctl enable hostapd
 systemctl enable bind9
