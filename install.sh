@@ -74,7 +74,6 @@ systemctl disable isc-dhcp-server
 systemctl disable openvpn
 systemctl enable hostapd
 systemctl disable bind9
-echo "boot_delay=80" > /boot/config.txt
 
 # End
 
