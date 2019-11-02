@@ -18,7 +18,6 @@ echo root:$rootpass | chpasswd
 echo pi:$rootpass | chpasswd
 sudo service ssh restart
 sudo service sshd restart
-echo $rootpass
 
 # Wifi Installation
 
@@ -37,7 +36,6 @@ rm -rf /etc/default/isc-dhcp-server
 cp /root/raspberry_router/isc-dhcp-server /etc/default/isc-dhcp-server
 rm -rf /etc/dhcp/dhcpd.conf
 cp /root/raspberry_router/dhcpd.conf /etc/dhcp/dhcpd.conf
-systemctl disable isc-dhcp-server.service
 
 # Hostpad config
 
@@ -46,7 +44,6 @@ cp /root/raspberry_router/hostapd.conf /etc/hostapd/hostapd.conf
 rm -rf /etc/default/hostapd
 cp /root/raspberry_router/hostapd /etc/default/hostapd
 systemctl unmask hostapd
-systemctl enable hostapd
 
 # Bind config
 
@@ -60,7 +57,6 @@ cp /root/raspberry_router/blacklisted.zones /etc/bind/blacklisted.zones
 
 # Openvpn config
 
-systemctl disable openvpn
 cp /root/raspberry_router/client.ovpn /etc/openvpn/client.ovpn
 
 # Internet share config
@@ -71,6 +67,13 @@ iptables -t nat -A  POSTROUTING -o tun0 -j MASQUERADE
 sh -c "iptables-save > /etc/iptables.ipv4.nat"
 rm -rf /etc/rc.local
 cp /root/raspberry_router/rc.local /etc/rc.local
+
+# Services enable
+systemctl enable isc-dhcp-server
+systemctl enable openvpn
+systemctl enable hostapd
+systemctl enable bind9
+echo "boot_delay=30" > /boot/config.txt
 
 # End
 
