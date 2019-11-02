@@ -10,6 +10,8 @@ Hi! This is a personal project who installs a dhcp server, pushbullet system mon
 
 - Web interface
 
+- Battery meter
+
 # How to access:
 via ip or via hostname: raspberrypi.local
 default raspberry login: pi / raspberry
