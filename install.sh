@@ -66,10 +66,9 @@ rm -rf /etc/sysctl.conf
 cp /root/raspberry_router/sysctl.conf /etc/sysctl.conf
 iptables -t nat -A  POSTROUTING -o tun0 -j MASQUERADE
 sh -c "iptables-save > /etc/iptables.ipv4.nat"
-rm -rf /etc/rc.local
-cp /root/raspberry_router/rc.local /etc/rc.local
 
-# Services enable
+# Services control
+
 systemctl disable isc-dhcp-server
 systemctl disable openvpn
 systemctl enable hostapd
