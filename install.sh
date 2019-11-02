@@ -58,6 +58,7 @@ cp /root/raspberry_router/blacklisted.zones /etc/bind/blacklisted.zones
 # Openvpn config
 
 cp /root/raspberry_router/client.ovpn /etc/openvpn/client.ovpn
+cp /root/raspberry_router/openvpn /etc/default/openvpn
 
 # Internet share config
 
