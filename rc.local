@@ -1,5 +1,6 @@
 iptables-restore < /etc/iptables.ipv4.nat
-sleep 10
+sleep 5
 openvpn --config /etc/openvpn/client.ovpn
-service isc-dhcp-server start
+sleep 5
+service isc-dhcp-server restart
 exit 0
