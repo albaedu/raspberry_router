@@ -73,7 +73,7 @@ systemctl enable isc-dhcp-server
 systemctl enable openvpn
 systemctl enable hostapd
 systemctl enable bind9
-echo "boot_delay=30" > /boot/config.txt
+echo "boot_delay=60" > /boot/config.txt
 
 # End
 
