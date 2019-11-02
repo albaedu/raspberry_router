@@ -22,7 +22,9 @@ default raspberry login: pi / raspberry
 
 2 - Install nginx/apache server (not in the vpn server) and set a default page for blocked site 
 
-3 - Change the VPN Server ip used to show blocked ad in bind zone
+3 - Change the Ad Splash Server ip used to show blocked ad in bind zone
+
+4 - The 4G router must can connect by itself, without asking pin code
 
 #Preparation:
 
