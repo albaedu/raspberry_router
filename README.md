@@ -4,7 +4,7 @@ Hi! This is a personal project who installs a dhcp server, pushbullet system mon
 
 # Pending:
 
-- Push notifications
+- Push notifications (starts, no internet 4g, no internet VPN)
 
 - Ads lists to block
 
